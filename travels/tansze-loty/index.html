@@ -60,8 +60,6 @@ section{padding:88px 0}
 .hero h1 em{font-style:normal;color:var(--aqua)}
 .lead{font-size:20px;line-height:1.5;max-width:560px;color:#E6F1F4;margin:0 0 32px}
 .buy{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px}
-.price{font-family:var(--display);font-weight:700;font-size:30px}
-.price small{display:block;font-family:var(--sans);font-size:13px;font-weight:600;opacity:.75;letter-spacing:0}
 .btn{display:inline-flex;align-items:center;gap:10px;font:800 17px/1 var(--sans);padding:18px 28px;border-radius:999px;text-decoration:none;border:0;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease}
 .btn-primary{background:var(--aqua);color:var(--ink);box-shadow:0 8px 24px rgba(10,40,52,.28)}
 .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(10,40,52,.34)}
@@ -73,6 +71,7 @@ section{padding:88px 0}
 .cover{justify-self:center;width:min(100%,380px);transform:rotate(2.5deg);border-radius:6px;box-shadow:0 30px 60px rgba(8,30,40,.45),0 0 0 1px rgba(255,255,255,.08)}
 .placeholder-note{display:none;margin:14px 0 0;font-size:13px;font-weight:700;color:var(--ink);background:#FFE8A3;border-radius:8px;padding:8px 12px;max-width:520px}
 .is-placeholder .placeholder-note{display:block}
+.buy-note{font-size:15px;font-weight:600;color:#D3E6EC;max-width:260px;line-height:1.4}
 
 /* W zestawie */
 .stats{background:var(--paper);border-bottom:1px solid var(--line);padding:0}
@@ -138,8 +137,30 @@ section{padding:88px 0}
 .final{background:var(--petrol);color:#fff;text-align:center}
 .final h2{max-width:760px;margin:0 auto 18px}
 .final p{color:#D3E6EC;max-width:560px;margin:0 auto 32px}
-.final .buy{justify-content:center}
 .final .placeholder-note{margin-left:auto;margin-right:auto;color:var(--ink)}
+
+/* Lista oczekujących */
+.perks{list-style:none;margin:0 auto 32px;padding:0;max-width:620px;display:grid;gap:10px;text-align:left}
+.perks li{display:flex;gap:12px;align-items:flex-start;color:#E6F1F4}
+.perks b{color:#fff}
+.perks li::before{content:"";flex:0 0 22px;height:22px;margin-top:1px;border-radius:50%;background:var(--aqua) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%231D1424' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat}
+.signup{max-width:620px;margin:0 auto;background:var(--paper);color:var(--ink);border-radius:20px;padding:28px;text-align:left;box-shadow:0 20px 50px rgba(8,30,40,.3)}
+.signup .row{display:grid;grid-template-columns:1fr 1.3fr;gap:14px}
+.signup label{display:block;font-size:14px;font-weight:700;margin-bottom:6px}
+.signup label span{font-weight:500;color:var(--muted)}
+.signup input[type=text],.signup input[type=email]{width:100%;font:500 16px var(--sans);color:var(--ink);padding:14px 16px;border:1.5px solid var(--line);border-radius:12px;background:#fff}
+.signup input:focus{outline:none;border-color:var(--petrol);box-shadow:0 0 0 4px rgba(31,95,120,.15)}
+.signup .consent{display:flex;gap:10px;align-items:flex-start;margin:18px 0 20px;font-size:14px;line-height:1.5;color:var(--muted)}
+.signup .consent input{margin-top:3px;width:18px;height:18px;accent-color:var(--petrol);flex:0 0 auto}
+.signup .btn{width:100%;justify-content:center;background:var(--petrol);color:#fff;box-shadow:none}
+.signup .btn:hover{background:var(--petrol-deep);transform:none}
+.signup .btn[disabled]{opacity:.6;cursor:wait}
+.signup .form-msg{margin:16px 0 0;font-size:15px;line-height:1.5;color:var(--ink);max-width:none}
+.signup .placeholder-note{margin:14px 0 0;max-width:none}
+.signup .form-msg:empty{display:none}
+.form-msg.ok{background:var(--aqua-soft);border-radius:12px;padding:14px 16px;color:var(--ink)}
+.form-msg.err{color:#A1261B;font-weight:600}
+.signup-done .signup form{display:none}
 footer{background:var(--ink);color:#BDB6C4;font-size:14px;padding:36px 0}
 footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center}
 footer a{color:#fff}
@@ -155,6 +176,8 @@ footer p{margin:0}
   .pages li:last-child{display:none}
 }
 @media (max-width:640px){
+  .signup{padding:20px}
+  .signup .row{grid-template-columns:1fr}
   body{font-size:16px}
   .wrap{padding:0 16px}
   section{padding:64px 0}
@@ -188,10 +211,9 @@ footer p{margin:0}
         <h1>Jak płacić <em>mniej</em> za loty</h1>
         <p class="lead">Mile, punkty i okazje krok po kroku. Od pomysłu na urlop do wejścia na pokład: zbieraj mile przy zwykłych wydatkach, rozpoznawaj prawdziwe okazje i sprawdzaj, czy naprawdę płacisz mniej.</p>
         <div class="buy">
-          <a class="btn btn-primary" data-buy href="#kup">Kup ebooka</a>
-          <div class="price" data-price></div>
+          <a class="btn btn-primary" href="#zapisy">Odbierz darmowy rozdział</a>
+          <p class="buy-note">Zapisz się przed premierą i kup ebooka taniej na starcie.</p>
         </div>
-        <p class="placeholder-note">Podgląd: płatność nie jest jeszcze podłączona, a cena jest do ustalenia.</p>
         <ul class="facts">
           <li>PDF, 54 strony</li>
           <li>Kalkulator w przeglądarce</li>
@@ -324,9 +346,17 @@ footer p{margin:0}
     <div class="wrap">
       <div class="section-head">
         <span class="eyebrow">Pytania</span>
-        <h2>Zanim kupisz</h2>
+        <h2>Zanim się zapiszesz</h2>
       </div>
       <div class="faq">
+        <details>
+          <summary>Co dostanę po zapisie na listę?</summary>
+          <p>Po potwierdzeniu adresu wyślę Ci mailem rozdział 3 w PDF: rozbicie prawdziwego biletu za mile na każdą opłatę. Będę wdzięczny za kilka zdań opinii, bo pomoże mi dopracować ebooka. Gdy ruszy sprzedaż, osoby z listy dostaną go w niższej cenie przez kilka dni.</p>
+        </details>
+        <details>
+          <summary>Kiedy premiera?</summary>
+          <p>Ebook jest na ostatniej prostej. Datę premiery i cenę dla osób z listy podam w mailu, zanim ruszy sprzedaż.</p>
+        </details>
         <details>
           <summary>W jakim formacie jest ebook?</summary>
           <p>To PDF w formacie A4, 54 strony. Przeczytasz go na komputerze, tablecie i telefonie, a karty pracy możesz wydrukować. Kalkulator to osobny plik, który otwierasz w przeglądarce na swoim komputerze.</p>
@@ -351,15 +381,36 @@ footer p{margin:0}
     </div>
   </section>
 
-  <section class="final" id="kup">
+  <section class="final" id="zapisy">
     <div class="wrap">
-      <h2>Zacznij od jednej podróży</h2>
-      <p>Wybierz wyjazd, na który naprawdę chcesz polecieć, i sprawdź, czy mile pomogą Ci zapłacić mniej.</p>
-      <div class="buy">
-        <a class="btn btn-primary" data-buy href="#kup">Kup ebooka</a>
-        <div class="price" data-price></div>
+      <span class="eyebrow" style="color:var(--aqua)">Lista przed premierą</span>
+      <h2 style="margin-top:14px">Przeczytaj rozdział 3, zanim ebook trafi do sprzedaży</h2>
+      <ul class="perks">
+        <li><span><b>Rozdział 3 za darmo.</b> Prawdziwy bilet WAW–SFO–WAW za mile rozpisany na każdą opłatę.</span></li>
+        <li><span><b>Wpływ na ebooka.</b> Napisz mi, co jest jasne, a co nie. Twoja opinia trafi do wersji na premierę.</span></li>
+        <li><span><b>Niższa cena na start.</b> Po premierze osoby z listy kupią ebooka taniej przez kilka dni.</span></li>
+      </ul>
+      <div class="signup">
+        <form id="waitlist" novalidate>
+          <div class="row">
+            <div>
+              <label for="wl-name">Imię <span>(opcjonalnie)</span></label>
+              <input id="wl-name" name="name" type="text" autocomplete="given-name">
+            </div>
+            <div>
+              <label for="wl-email">Adres e-mail</label>
+              <input id="wl-email" name="email" type="email" autocomplete="email" required>
+            </div>
+          </div>
+          <label class="consent">
+            <input id="wl-consent" name="consent" type="checkbox" required>
+            <span>Chcę dostać rozdział 3 i maile o premierze ebooka „Jak płacić mniej za loty” od Damiana Tarnackiego (WARNA travels). Zgodę mogę wycofać w każdej chwili linkiem w mailu. Szczegóły w <a href="polityka-prywatnosci.html">polityce prywatności</a>.</span>
+          </label>
+          <button class="btn" type="submit">Wyślij mi rozdział</button>
+        </form>
+        <p class="form-msg" role="status" aria-live="polite"></p>
+        <p class="placeholder-note">Podgląd: formularz nie jest jeszcze podłączony do narzędzia mailowego.</p>
       </div>
-      <p class="placeholder-note">Podgląd: płatność nie jest jeszcze podłączona, a cena jest do ustalenia.</p>
     </div>
   </section>
 </main>
@@ -367,26 +418,45 @@ footer p{margin:0}
 <footer>
   <div class="wrap">
     <p>© 2026 Damian Tarnacki · <a href="/">WARNA</a> travels</p>
-    <p>Materiał edukacyjny, nie jest indywidualną rekomendacją zakupu.</p>
+    <p><a href="polityka-prywatnosci.html">Polityka prywatności</a> · Materiał edukacyjny, nie jest indywidualną rekomendacją zakupu.</p>
   </div>
 </footer>
 
 <script>
-/* Sprzedaż: uzupełnij oba pola, gdy będzie wybrany operator płatności.
-   Dopóki checkoutUrl jest pusty, strona pokazuje oznaczenie podglądu. */
-var SALE = {
-  price: '',        /* np. '49 zł' */
-  checkoutUrl: ''   /* link do płatności */
+/* Lista oczekujących. Uzupełnij endpoint po założeniu formularza w narzędziu mailowym
+   (np. MailerLite: https://assets.mailerlite.com/jsonp/<konto>/forms/<formularz>/subscribe).
+   Narzędzie wysyła mail z potwierdzeniem (double opt-in), a po nim rozdział 3.
+   Dopóki endpoint jest pusty, formularz działa w trybie podglądu i nic nie wysyła. */
+var WAITLIST = {
+  endpoint: '',
+  fields: { email: 'fields[email]', name: 'fields[name]' },
+  extra: { 'ml-submit': '1', anticsrf: 'true' }
 };
 (function () {
-  var ready = SALE.checkoutUrl !== '';
+  var form = document.getElementById('waitlist');
+  var msg = form.parentNode.querySelector('.form-msg');
+  var ready = WAITLIST.endpoint !== '';
   document.body.classList.toggle('is-placeholder', !ready);
-  document.querySelectorAll('[data-buy]').forEach(function (a) {
-    if (ready) { a.href = SALE.checkoutUrl; }
-    else { a.setAttribute('aria-disabled', 'true'); a.textContent = 'Sprzedaż wkrótce'; a.addEventListener('click', function (e) { e.preventDefault(); }); }
-  });
-  document.querySelectorAll('[data-price]').forEach(function (el) {
-    el.innerHTML = SALE.price ? SALE.price + '<small>jednorazowo, PDF + kalkulator</small>' : '<small>cena do ustalenia</small>';
+  function show(text, cls) { msg.textContent = text; msg.className = 'form-msg ' + cls; }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var email = form.email.value.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { show('Wpisz poprawny adres e-mail.', 'err'); form.email.focus(); return; }
+    if (!form.consent.checked) { show('Zaznacz zgodę, żebym mógł wysłać Ci rozdział.', 'err'); return; }
+    if (!ready) { show('To jest podgląd: formularz zacznie działać po podłączeniu narzędzia mailowego.', 'err'); return; }
+    var data = new FormData();
+    data.append(WAITLIST.fields.email, email);
+    if (form.name.value.trim()) data.append(WAITLIST.fields.name, form.name.value.trim());
+    Object.keys(WAITLIST.extra).forEach(function (k) { data.append(k, WAITLIST.extra[k]); });
+    var btn = form.querySelector('button'); btn.disabled = true;
+    fetch(WAITLIST.endpoint, { method: 'POST', body: data })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); })
+      .then(function () {
+        document.body.classList.add('signup-done');
+        show('Jeszcze jeden krok: kliknij link w mailu, który właśnie wysłałem, żeby potwierdzić zapis. Rozdział 3 przyjdzie zaraz potem. Nie widzisz maila? Zajrzyj do Spamu lub Ofert.', 'ok');
+      })
+      .catch(function () { show('Nie udało się zapisać. Spróbuj ponownie za chwilę.', 'err'); })
+      .then(function () { btn.disabled = false; });
   });
 })();
 </script>
