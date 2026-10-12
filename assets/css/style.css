@@ -102,7 +102,7 @@ main { flex: 1; padding-block: 72px 64px; }
     gap: 10px;
 }
 
-.links a {
+.links a, .links .soon {
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -119,6 +119,7 @@ main { flex: 1; padding-block: 72px 64px; }
 .links a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .links a.cta svg { transition: transform .15s; }
 .links a.cta:hover svg { transform: translateX(3px); }
+.links .soon { background: transparent; border: 1.5px dashed var(--accent); color: var(--muted); cursor: default; }
 
 footer { font-size: 15px; }
 .foot { padding-block: 24px 40px; border-top: 1px solid var(--line); }
