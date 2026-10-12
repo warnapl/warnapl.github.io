@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jak płacić mniej za loty · ebook · WARNA travels</title>
+<meta name="description" content="Ebook o kupowaniu lotów za mile i łapaniu okazji, dla podróżujących z Polski. 13 rozdziałów, karty pracy i kalkulator. Damian Tarnacki.">
+<meta property="og:type" content="product">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:title" content="Jak płacić mniej za loty: mile, punkty i okazje">
+<meta property="og:description" content="Od pomysłu na urlop do wejścia na pokład. Ebook dla podróżujących z Polski.">
+<meta property="og:image" content="https://warna.pl/ebook/assets/og.jpg">
+<meta property="og:url" content="https://warna.pl/ebook/">
+<link rel="canonical" href="https://warna.pl/ebook/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1F5F78">
+<link rel="icon" type="image/svg+xml" href="assets/emblemat-travels.svg">
+<link rel="preload" href="fonts/unbounded-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* Unbounded i Manrope: SIL OFL 1.1, licencje w fonts/. Pliki z Fontsource, hostowane lokalnie. */
+@font-face{font-family:Unbounded;font-display:swap;font-weight:200 900;src:url(fonts/unbounded-latin-ext-wght-normal.woff2) format("woff2");unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:Unbounded;font-display:swap;font-weight:200 900;src:url(fonts/unbounded-latin-wght-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Manrope;font-display:swap;font-weight:200 800;src:url(fonts/manrope-latin-ext-wght-normal.woff2) format("woff2");unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:Manrope;font-display:swap;font-weight:200 800;src:url(fonts/manrope-latin-wght-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+/* Kolory WARNA travels (branding/b-v3/generator.py): linia #1F5F78, akcent #9EE0EA, tusz #1D1424 */
+:root{
+  --petrol:#1F5F78;--petrol-deep:#174A5E;--aqua:#9EE0EA;--aqua-soft:#E3F5F8;
+  --ink:#1D1424;--muted:#5B5663;--line:#DCE6EA;--bg:#F6F9FA;--paper:#FFFFFF;
+  --display:Unbounded,"Arial Black",system-ui,sans-serif;
+  --sans:Manrope,system-ui,"Segoe UI",sans-serif;
+  --wrap:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--petrol)}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);line-height:1.15;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(26px,3.6vw,38px);font-weight:700}
+h3{font-size:17px;font-weight:600}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--petrol)}
+section{padding:88px 0}
+.section-head{max-width:680px;margin-bottom:44px}
+.section-head p{color:var(--muted);margin:14px 0 0}
+
+/* Hero */
+.hero{background:var(--petrol);color:#fff;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:auto -10% -55% 35%;height:110%;background:radial-gradient(closest-side,rgba(158,224,234,.22),transparent);pointer-events:none}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding-top:26px;position:relative;z-index:1}
+.topbar img{height:38px;width:auto}
+.topbar a.nav{color:#fff;text-decoration:none;font-weight:700;font-size:15px;opacity:.9}
+.topbar a.nav:hover{opacity:1;text-decoration:underline}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding:64px 0 96px;position:relative;z-index:1}
+.hero .eyebrow{color:var(--aqua)}
+.hero h1{font-size:clamp(38px,6vw,68px);font-weight:800;margin:18px 0 20px}
+.hero h1 em{font-style:normal;color:var(--aqua)}
+.lead{font-size:20px;line-height:1.5;max-width:560px;color:#E6F1F4;margin:0 0 32px}
+.buy{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px}
+.price{font-family:var(--display);font-weight:700;font-size:30px}
+.price small{display:block;font-family:var(--sans);font-size:13px;font-weight:600;opacity:.75;letter-spacing:0}
+.btn{display:inline-flex;align-items:center;gap:10px;font:800 17px/1 var(--sans);padding:18px 28px;border-radius:999px;text-decoration:none;border:0;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease}
+.btn-primary{background:var(--aqua);color:var(--ink);box-shadow:0 8px 24px rgba(10,40,52,.28)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(10,40,52,.34)}
+.btn-dark{background:var(--petrol);color:#fff}
+.btn-dark:hover{background:var(--petrol-deep)}
+.btn[aria-disabled="true"]{cursor:default;transform:none}
+.facts{display:flex;flex-wrap:wrap;gap:8px 22px;margin:28px 0 0;padding:0;list-style:none;font-size:14px;font-weight:600;color:#D3E6EC}
+.facts li::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--aqua);margin-right:9px;vertical-align:2px}
+.cover{justify-self:center;width:min(100%,380px);transform:rotate(2.5deg);border-radius:6px;box-shadow:0 30px 60px rgba(8,30,40,.45),0 0 0 1px rgba(255,255,255,.08)}
+.placeholder-note{display:none;margin:14px 0 0;font-size:13px;font-weight:700;color:var(--ink);background:#FFE8A3;border-radius:8px;padding:8px 12px;max-width:520px}
+.is-placeholder .placeholder-note{display:block}
+
+/* W zestawie */
+.stats{background:var(--paper);border-bottom:1px solid var(--line);padding:0}
+.stats ul{list-style:none;margin:0;padding:34px 0;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.stats b{display:block;font-family:var(--display);font-size:40px;font-weight:700;color:var(--petrol);line-height:1.1}
+.stats span{font-size:15px;color:var(--muted);font-weight:600}
+
+/* Korzyści */
+.outcomes{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;list-style:none;margin:0;padding:0}
+.outcomes li{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:24px 24px 26px;position:relative}
+.outcomes li::before{content:"";display:block;width:34px;height:34px;border-radius:50%;margin-bottom:16px;background:var(--aqua-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%231F5F78' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/20px no-repeat}
+.outcomes p{margin:0}
+
+/* Przykład */
+.example{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.example-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.example-grid p{color:var(--muted)}
+.receipt{background:var(--ink);color:#fff;border-radius:18px;padding:26px 28px;font-variant-numeric:tabular-nums}
+.receipt h3{font-family:var(--sans);font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--aqua);margin-bottom:16px}
+.receipt dl{margin:0;display:grid;grid-template-columns:1fr auto;row-gap:10px}
+.receipt dt{color:#CFC8D6}
+.receipt dd{margin:0;text-align:right;font-weight:700}
+.receipt .total{border-top:1px dashed rgba(255,255,255,.3);padding-top:12px;margin-top:4px;font-weight:800;color:#fff}
+.receipt dd.total{color:var(--aqua);font-size:20px}
+
+/* Dla kogo */
+.audience{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;list-style:none;margin:0;padding:0}
+.audience li{border-top:3px solid var(--petrol);padding-top:16px}
+.audience h3{font-size:15px;margin-bottom:8px}
+.audience p{margin:0;font-size:15px;color:var(--muted)}
+
+/* Podgląd */
+.preview{background:var(--aqua-soft)}
+.pages{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin:0;padding:0;list-style:none}
+.pages figure{margin:0}
+.pages img{border-radius:6px;box-shadow:0 14px 34px rgba(20,60,76,.18);background:#fff}
+.pages figcaption{font-size:15px;margin-top:14px;color:var(--muted)}
+.pages figcaption b{color:var(--ink);display:block}
+
+/* Spis treści */
+.toc{columns:2;column-gap:48px;list-style:none;margin:0;padding:0;counter-reset:ch}
+.toc li{break-inside:avoid;counter-increment:ch;display:flex;gap:16px;padding:13px 0;border-bottom:1px solid var(--line)}
+.toc li::before{content:counter(ch,decimal-leading-zero);font-family:var(--display);font-weight:600;color:var(--petrol);min-width:30px}
+.toc-extra{margin:28px 0 0;color:var(--muted)}
+
+/* Autor */
+.author{display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:start;max-width:860px}
+.author img{width:96px;height:96px}
+.author blockquote{margin:0;font-size:21px;line-height:1.55}
+.author cite{display:block;margin-top:16px;font-style:normal;font-weight:800}
+.author cite span{font-weight:600;color:var(--muted)}
+
+/* FAQ */
+.faq{max-width:820px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;padding:20px 40px 20px 0;font-weight:800;font-size:18px;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:4px;top:14px;font:600 26px var(--sans);color:var(--petrol)}
+.faq details[open] summary::after{content:"−"}
+.faq details p{margin:0 0 20px;color:var(--muted)}
+
+/* Końcowe CTA i stopka */
+.final{background:var(--petrol);color:#fff;text-align:center}
+.final h2{max-width:760px;margin:0 auto 18px}
+.final p{color:#D3E6EC;max-width:560px;margin:0 auto 32px}
+.final .buy{justify-content:center}
+.final .placeholder-note{margin-left:auto;margin-right:auto;color:var(--ink)}
+footer{background:var(--ink);color:#BDB6C4;font-size:14px;padding:36px 0}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center}
+footer a{color:#fff}
+footer p{margin:0}
+
+@media (max-width:960px){
+  .hero-grid,.example-grid{grid-template-columns:1fr;gap:44px}
+  .hero-grid{padding:40px 0 72px}
+  .cover{width:min(70%,300px);order:-1}
+  .outcomes{grid-template-columns:1fr 1fr}
+  .audience{grid-template-columns:1fr 1fr}
+  .pages{grid-template-columns:1fr 1fr}
+  .pages li:last-child{display:none}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  section{padding:64px 0}
+  .topbar img{height:30px}
+  .lead{font-size:18px}
+  .stats ul{grid-template-columns:1fr 1fr;padding:26px 0}
+  .stats b{font-size:32px}
+  .outcomes,.audience{grid-template-columns:1fr}
+  .pages{grid-template-columns:1fr}
+  .pages li:last-child{display:block}
+  .toc{columns:1}
+  .author{grid-template-columns:1fr;gap:20px}
+  .author img{width:72px;height:72px}
+  .author blockquote{font-size:18px}
+  .btn{width:100%;justify-content:center}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="topbar">
+      <a href="/" aria-label="WARNA travels, strona główna"><img src="assets/poziomy-travels-negatyw.svg" alt="WARNA travels" width="169" height="38"></a>
+      <a class="nav" href="#spis-tresci">Spis treści</a>
+    </div>
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Ebook dla podróżujących z Polski</span>
+        <h1>Jak płacić <em>mniej</em> za loty</h1>
+        <p class="lead">Mile, punkty i okazje krok po kroku. Od pomysłu na urlop do wejścia na pokład: zbieraj mile przy zwykłych wydatkach, rozpoznawaj prawdziwe okazje i sprawdzaj, czy naprawdę płacisz mniej.</p>
+        <div class="buy">
+          <a class="btn btn-primary" data-buy href="#kup">Kup ebooka</a>
+          <div class="price" data-price></div>
+        </div>
+        <p class="placeholder-note">Podgląd: płatność nie jest jeszcze podłączona, a cena jest do ustalenia.</p>
+        <ul class="facts">
+          <li>PDF, 55 stron</li>
+          <li>Kalkulator w przeglądarce</li>
+          <li>Źródła sprawdzone 11.10.2026</li>
+        </ul>
+      </div>
+      <img class="cover" src="assets/okladka.jpg" width="720" height="1018" alt="Okładka ebooka „Jak płacić mniej za loty. Mile, punkty i okazje krok po kroku”, Damian Tarnacki">
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="stats" aria-label="W zestawie">
+    <div class="wrap">
+      <ul>
+        <li><b>13</b><span>rozdziałów</span></li>
+        <li><b>6</b><span>kart pracy</span></li>
+        <li><b>3</b><span>ćwiczenia</span></li>
+        <li><b>2</b><span>moduły kalkulatora</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Po lekturze</span>
+        <h2>Następnym razem, gdy zobaczysz „okazję”, będziesz wiedzieć, czy naprawdę nią jest.</h2>
+      </div>
+      <ul class="outcomes">
+        <li><p>Policzysz pełny koszt biletu za mile: punkty, dopłaty, dojazd i wartość salda, które już masz.</p></li>
+        <li><p>Odczytasz prawdziwy bilet WAW–SFO–WAW: każdy kod opłaty i to, ile stanowi dopłata przewoźnika.</p></li>
+        <li><p>Ocenisz promocję na mile, zanim wydasz pieniądze, i ustalisz granicę opłacalnego zakupu.</p></li>
+        <li><p>Znajdziesz miejsca za mile i ustawisz alerty, które pracują za Ciebie.</p></li>
+        <li><p>Ocenisz triki na tańszy bilet, od stopoveru po skiplagging, wraz z ryzykiem dla konta z milami.</p></li>
+        <li><p>Przejdziesz rezerwację z listą kontrolną, bez pułapek NOCHNG i NONREF.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="example">
+    <div class="wrap example-grid">
+      <div>
+        <span class="eyebrow">Prawdziwy przykład z rozdziału 3</span>
+        <h2 style="margin-top:14px">Bilet za mile nie jest za darmo</h2>
+        <p>Przy bilecie za mile zwykle zostaje coś do zapłaty. W ebooku rozpisuję prawdziwe potwierdzenie biletu LOT Warszawa–San Francisco–Warszawa: każdy kod opłaty po polsku, z odnośnikiem do źródła.</p>
+        <p>Dzięki temu zanim zaczniesz zbierać, wiesz, ile naprawdę wydasz i czy dopłata za wygodniejszy fotel jest dla Ciebie warta swojej ceny.</p>
+      </div>
+      <div class="receipt" role="group" aria-label="Rozbicie dopłaty do biletu za mile">
+        <h3>Potwierdzenie biletu · WAW–SFO–WAW</h3>
+        <dl>
+          <dt>Taryfa (bilet za mile)</dt><dd>0,00 USD</dd>
+          <dt>Podatki i opłaty lotniskowe (8 pozycji)</dt><dd>354,35 zł</dd>
+          <dt>YQ, dopłata przewoźnika</dt><dd>450,44 zł</dd>
+          <dt class="total">Do zapłaty</dt><dd class="total">804,79 zł</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Dla kogo</span>
+        <h2>Nie musisz mieć setek tysięcy punktów</h2>
+        <p>Możesz zacząć od jednej podróży. Rozdział 12 pomaga wybrać sposób zbierania, który pasuje do Ciebie.</p>
+      </div>
+      <ul class="audience">
+        <li><h3>Latasz rzadko</h3><p>Zbierasz przy okazji tego, co już robisz, i celujesz w jeden wyjazd.</p></li>
+        <li><h3>Podróżujesz służbowo</h3><p>Dopilnujesz punktów za loty i noclegi, które i tak kupujesz.</p></li>
+        <li><h3>Masz elastyczne daty</h3><p>Polujesz na miejsca w business i promocje milowe.</p></li>
+        <li><h3>Lecicie rodziną w ferie</h3><p>Liczysz koszt dla całej grupy i planujesz z wyprzedzeniem.</p></li>
+        <li><h3>Masz już dużo punktów</h3><p>Sprawdzasz, gdzie dadzą najwięcej, zanim wygasną.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="preview">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Zajrzyj do środka</span>
+        <h2>Konkretne liczby, tabele i karty pracy</h2>
+      </div>
+      <ul class="pages">
+        <li><figure><img src="assets/strona-5.jpg" width="760" height="1075" loading="lazy" alt="Strona otwierająca rozdział 1: Zacznij od podróży, na którą naprawdę chcesz polecieć"><figcaption><b>Rozdział 1</b>Zaczynasz od podróży, nie od programu.</figcaption></figure></li>
+        <li><figure><img src="assets/strona-9.jpg" width="760" height="1075" loading="lazy" alt="Strona z rozdziału 3: tabela kodów opłat na bilecie WAW–SFO–WAW"><figcaption><b>Rozdział 3</b>Każdy kod opłaty na prawdziwym bilecie.</figcaption></figure></li>
+        <li><figure><img src="assets/strona-47.jpg" width="760" height="1075" loading="lazy" alt="Karta pracy 3: Ocena konkretnej oferty"><figcaption><b>Karta pracy 3 z 6</b>Ocena konkretnej oferty, gotowa do druku.</figcaption></figure></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="spis-tresci">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Spis treści</span>
+        <h2>13 rozdziałów, od pomysłu do biletu</h2>
+      </div>
+      <ol class="toc">
+        <li>Zacznij od podróży, na którą naprawdę chcesz polecieć</li>
+        <li>Poznaj mile bez zbędnego żargonu</li>
+        <li>Zobacz, ile naprawdę zapłacisz</li>
+        <li>Znajdź program, który pasuje do Twojego wyjazdu</li>
+        <li>Zbieraj przy okazji tego, co już robisz</li>
+        <li>Kup brakujące punkty, kiedy masz dla nich plan</li>
+        <li>Poszukaj miejsc, które da się zarezerwować</li>
+        <li>Pozwól okazjom przychodzić do Ciebie</li>
+        <li>Sprawdź kilka pomysłów na pierwsze wyszukiwanie</li>
+        <li>Tańszy bilet za gotówkę: sprawdzone triki i ich ryzyko</li>
+        <li>Doprowadź rezerwację do końca</li>
+        <li>Wybierz sposób zbierania, który pasuje do Ciebie</li>
+        <li>Zacznij spokojnie: plan na pierwszy miesiąc</li>
+      </ol>
+      <p class="toc-extra">Do tego karty pracy, trzy ćwiczenia z odpowiedziami, źródła z linkami i kalkulator: mile kontra gotówka oraz wylot z innego lotniska.</p>
+    </div>
+  </section>
+
+  <section class="example">
+    <div class="wrap">
+      <div class="author">
+        <img src="assets/emblemat-travels.svg" width="96" height="96" alt="">
+        <blockquote>
+          <p style="margin:0">To mój prywatny zbiór doświadczeń i wiedzy, przekazywany od jednego podróżnika drugiemu. Nie latam zawodowo. Po prostu lubię podróżować i nie lubię przepłacać.</p>
+          <cite>Damian Tarnacki <span>· autor, WARNA travels</span></cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Pytania</span>
+        <h2>Zanim kupisz</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>W jakim formacie jest ebook?</summary>
+          <p>To PDF w formacie A4, 55 stron. Przeczytasz go na komputerze, tablecie i telefonie, a karty pracy możesz wydrukować. Kalkulator to osobny plik, który otwierasz w przeglądarce na swoim komputerze.</p>
+        </details>
+        <details>
+          <summary>Zaczynam od zera. Czy to dla mnie?</summary>
+          <p>Tak. Jeśli zaczynasz od zera, przeczytaj najpierw rozdziały 1–3: pomogą Ci wybrać wyjazd i zrozumieć rachunek. Rozdział 13 to spokojny plan na pierwszy miesiąc.</p>
+        </details>
+        <details>
+          <summary>Jakie programy omawia?</summary>
+          <p>Między innymi Miles &amp; More, Aeroplan, Avios, Flying Blue i Turkish Miles&amp;Smiles, a także sposoby zbierania w Polsce: kartę kredytową z milami, Mastercard Bezcenne Chwile, noclegi i Revolut.</p>
+        </details>
+        <details>
+          <summary>Na ile aktualne są informacje?</summary>
+          <p>Zasady programów sprawdziłem 11 października 2026 r. Przy źródłach znajdziesz linki, a liczby w przykładach służą do nauki liczenia, nie są ofertami do rezerwacji. Przed zakupem biletu sprawdź aktualne warunki na swoim koncie.</p>
+        </details>
+        <details>
+          <summary>Czy to porada finansowa?</summary>
+          <p>Nie. To materiał edukacyjny dla podróżujących z Polski, oparty na moim doświadczeniu. Nie jest indywidualną rekomendacją zakupu.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="final" id="kup">
+    <div class="wrap">
+      <h2>Zacznij od jednej podróży</h2>
+      <p>Wybierz wyjazd, na który naprawdę chcesz polecieć, i sprawdź, czy mile pomogą Ci zapłacić mniej.</p>
+      <div class="buy">
+        <a class="btn btn-primary" data-buy href="#kup">Kup ebooka</a>
+        <div class="price" data-price></div>
+      </div>
+      <p class="placeholder-note">Podgląd: płatność nie jest jeszcze podłączona, a cena jest do ustalenia.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Damian Tarnacki · <a href="/">WARNA</a> travels</p>
+    <p>Materiał edukacyjny, nie jest indywidualną rekomendacją zakupu.</p>
+  </div>
+</footer>
+
+<script>
+/* Sprzedaż: uzupełnij oba pola, gdy będzie wybrany operator płatności.
+   Dopóki checkoutUrl jest pusty, strona pokazuje oznaczenie podglądu. */
+var SALE = {
+  price: '',        /* np. '49 zł' */
+  checkoutUrl: ''   /* link do płatności */
+};
+(function () {
+  var ready = SALE.checkoutUrl !== '';
+  document.body.classList.toggle('is-placeholder', !ready);
+  document.querySelectorAll('[data-buy]').forEach(function (a) {
+    if (ready) { a.href = SALE.checkoutUrl; }
+    else { a.setAttribute('aria-disabled', 'true'); a.textContent = 'Sprzedaż wkrótce'; a.addEventListener('click', function (e) { e.preventDefault(); }); }
+  });
+  document.querySelectorAll('[data-price]').forEach(function (el) {
+    el.innerHTML = SALE.price ? SALE.price + '<small>jednorazowo, PDF + kalkulator</small>' : '<small>cena do ustalenia</small>';
+  });
+})();
+</script>
+</body>
+</html>
