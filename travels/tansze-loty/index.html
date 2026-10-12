@@ -38,9 +38,10 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font
 img{max-width:100%;height:auto;display:block}
 a{color:var(--petrol)}
 .wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
-h1,h2,h3{font-family:var(--display);line-height:1.15;margin:0;letter-spacing:-.01em}
-h2{font-size:clamp(26px,3.6vw,38px);font-weight:700}
-h3{font-size:17px;font-weight:600}
+/* Nagłówki w Manrope: małe „j” w Unbounded ma bardzo krótki ogonek i wygląda na ucięte. Unbounded zostaje dla liczb. */
+h1,h2,h3{font-family:var(--sans);line-height:1.15;margin:0;letter-spacing:-.02em}
+h2{font-size:clamp(28px,3.8vw,42px);font-weight:800}
+h3{font-size:18px;font-weight:800}
 .eyebrow{font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--petrol)}
 section{padding:88px 0}
 .section-head{max-width:680px;margin-bottom:44px}
@@ -55,7 +56,7 @@ section{padding:88px 0}
 .topbar a.nav:hover{opacity:1;text-decoration:underline}
 .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding:64px 0 96px;position:relative;z-index:1}
 .hero .eyebrow{color:var(--aqua)}
-.hero h1{font-size:clamp(38px,6vw,68px);font-weight:800;margin:18px 0 20px}
+.hero h1{font-size:clamp(42px,6.6vw,76px);font-weight:800;letter-spacing:-.03em;margin:18px 0 20px}
 .hero h1 em{font-style:normal;color:var(--aqua)}
 .lead{font-size:20px;line-height:1.5;max-width:560px;color:#E6F1F4;margin:0 0 32px}
 .buy{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px}
@@ -100,7 +101,7 @@ section{padding:88px 0}
 /* Dla kogo */
 .audience{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;list-style:none;margin:0;padding:0}
 .audience li{border-top:3px solid var(--petrol);padding-top:16px}
-.audience h3{font-size:15px;margin-bottom:8px}
+.audience h3{font-size:17px;margin-bottom:8px}
 .audience p{margin:0;font-size:15px;color:var(--muted)}
 
 /* Podgląd */
