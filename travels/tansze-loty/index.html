@@ -423,14 +423,13 @@ footer p{margin:0}
 </footer>
 
 <script>
-/* Lista oczekujących. Uzupełnij endpoint po założeniu formularza w narzędziu mailowym
-   (np. MailerLite: https://assets.mailerlite.com/jsonp/<konto>/forms/<formularz>/subscribe).
-   Narzędzie wysyła mail z potwierdzeniem (double opt-in), a po nim rozdział 3.
-   Dopóki endpoint jest pusty, formularz działa w trybie podglądu i nic nie wysyła. */
+/* Lista oczekujących: formularz MailerLite „Ebook tańsze loty – strona”.
+   MailerLite wysyła mail z potwierdzeniem (double opt-in), a po nim rozdział 3.
+   Pusty endpoint przełącza formularz w tryb podglądu, w którym nic nie wysyła. */
 var WAITLIST = {
-  endpoint: '',
+  endpoint: 'https://assets.mailerlite.com/jsonp/2707403/forms/201162327414801915/subscribe',
   fields: { email: 'fields[email]', name: 'fields[name]' },
-  extra: { 'ml-submit': '1', anticsrf: 'true' }
+  extra: { 'ml-submit': '1', anticsrf: 'true', ajax: '1' }
 };
 (function () {
   var form = document.getElementById('waitlist');
