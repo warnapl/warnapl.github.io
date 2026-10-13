@@ -54,6 +54,8 @@ svg { display: block; }
 .top { padding-block: 32px 0; }
 .brand { display: inline-block; color: var(--ink); }
 .brand svg { height: 60px; width: auto; }
+/* podpis znaku jak w negatywie: fiolet w jasnym motywie, lawenda w ciemnym */
+.brand .desc { fill: var(--codes); }
 
 main { flex: 1; padding-block: 72px 64px; }
 
