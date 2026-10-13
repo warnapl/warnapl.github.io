@@ -57,12 +57,12 @@ svg { display: block; }
 
 main { flex: 1; padding-block: 72px 64px; }
 
-/* wstęp w tych samych kolumnach co karty: nazwisko z hasłem po lewej, bio po prawej */
+/* wstęp w tych samych kolumnach co karty: nazwisko z hasłem po lewej, bio po prawej, oba od góry */
 .intro {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 12px 20px;
-    align-items: end;
+    align-items: start;
     margin-bottom: 48px;
 }
 .intro h1 {
