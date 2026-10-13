@@ -53,7 +53,7 @@ svg { display: block; }
 
 .top { padding-block: 32px 0; }
 .brand { display: inline-block; color: var(--ink); }
-.brand svg { height: 44px; width: auto; }
+.brand svg { height: 60px; width: auto; }
 
 main { flex: 1; padding-block: 72px 64px; }
 
@@ -66,15 +66,13 @@ main { flex: 1; padding-block: 72px 64px; }
     margin-bottom: 48px;
 }
 .intro h1 {
-    margin: 0 0 8px;
-    font-size: clamp(28px, 5vw, 40px);
-    line-height: 1.15;
+    margin: 0;
+    font-size: clamp(22px, 2.6vw, 28px);
+    line-height: 1.35;
     font-weight: 700;
     letter-spacing: -0.01em;
 }
 .intro p { margin: 0; color: var(--muted); font-size: 18px; }
-.intro .lead { margin-top: 8px; }
-.intro .lead { color: var(--ink); font-size: clamp(20px, 2.6vw, 24px); line-height: 1.4; font-weight: 600; }
 
 .lines {
     display: grid;
@@ -140,4 +138,5 @@ footer a:hover { color: var(--ink); }
     main { padding-block: 48px 40px; }
     .line { padding: 24px; }
     .lockup svg { height: 52px; }
+    .brand svg { height: 52px; }
 }
