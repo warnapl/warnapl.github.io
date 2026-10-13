@@ -57,7 +57,14 @@ svg { display: block; }
 
 main { flex: 1; padding-block: 72px 64px; }
 
-.intro { max-width: 40rem; margin-bottom: 48px; }
+/* wstęp w tych samych kolumnach co karty: nazwisko z hasłem po lewej, bio po prawej, oba od góry */
+.intro {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 12px 20px;
+    align-items: start;
+    margin-bottom: 48px;
+}
 .intro h1 {
     margin: 0 0 8px;
     font-size: clamp(28px, 5vw, 40px);
@@ -66,7 +73,7 @@ main { flex: 1; padding-block: 72px 64px; }
     letter-spacing: -0.01em;
 }
 .intro p { margin: 0; color: var(--muted); font-size: 18px; }
-.intro p + p { margin-top: 12px; }
+.intro .lead { margin-top: 8px; }
 .intro .lead { color: var(--ink); font-size: clamp(20px, 2.6vw, 24px); line-height: 1.4; font-weight: 600; }
 
 .lines {
