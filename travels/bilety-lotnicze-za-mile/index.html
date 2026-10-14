@@ -425,13 +425,13 @@ footer p{margin:0}
 </footer>
 
 <script>
-/* Lista oczekujących: formularz MailerLite „Ebook tańsze loty – strona”.
-   MailerLite wysyła mail z potwierdzeniem (double opt-in), a po nim rozdział 3.
-   Pusty endpoint przełącza formularz w tryb podglądu, w którym nic nie wysyła. */
+/* Lista oczekujących: formularz Brevo „Ebook strona”.
+   Brevo wysyła polski mail z potwierdzeniem (double opt-in), po kliknięciu wraca na #potwierdzone,
+   a automatyzacja wysyła rozdział 3. Pusty endpoint przełącza formularz w tryb podglądu. */
 var WAITLIST = {
-  endpoint: 'https://assets.mailerlite.com/jsonp/2707403/forms/201162327414801915/subscribe',
-  fields: { email: 'fields[email]', name: 'fields[name]' },
-  extra: { 'ml-submit': '1', anticsrf: 'true', ajax: '1' }
+  endpoint: 'https://fab233f9.sibforms.com/serve/MUIFAJc0BmU58kAU3h4ZRB-v80Ca4kr0xlhQqSCfxCpF38rPW50-Q_cuzB_mLpJUKfb4ZnSS6TGjorlytHvWYV-xwHZ5pICkJMojweCBlgB60R9nhH-KcSaiMiO2yQW8nDqST4-qzBPW2AdFAO-aZvRCkucTBE-ahDCj7SXfoyVdyLPFjnTCS_Yw0OnLPuWwvTuTnYhVRLG1TuDXVQ==',
+  fields: { email: 'EMAIL', name: 'FIRSTNAME' },
+  extra: { email_address_check: '', locale: 'pl', html_type: 'simple' }
 };
 (function () {
   var form = document.getElementById('waitlist');
@@ -455,8 +455,9 @@ var WAITLIST = {
     if (form.name.value.trim()) data.append(WAITLIST.fields.name, form.name.value.trim());
     Object.keys(WAITLIST.extra).forEach(function (k) { data.append(k, WAITLIST.extra[k]); });
     var btn = form.querySelector('button'); btn.disabled = true;
-    fetch(WAITLIST.endpoint, { method: 'POST', body: data })
-      .then(function (r) { if (!r.ok) throw new Error(r.status); })
+    fetch(WAITLIST.endpoint + '?isAjax=1', { method: 'POST', body: data })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json().catch(function () { return {}; }); })
+      .then(function (j) { if (j && j.success === false) throw new Error('brevo'); })
       .then(function () {
         document.body.classList.add('signup-done');
         show('Jeszcze jeden krok: kliknij link w mailu, który właśnie wysłałem, żeby potwierdzić zapis. Rozdział 3 przyjdzie zaraz potem. Nie widzisz maila? Zajrzyj do Spamu lub Ofert.', 'ok');
