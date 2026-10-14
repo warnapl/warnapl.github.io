@@ -439,6 +439,11 @@ var WAITLIST = {
   var ready = WAITLIST.endpoint !== '';
   document.body.classList.toggle('is-placeholder', !ready);
   function show(text, cls) { msg.textContent = text; msg.className = 'form-msg ' + cls; }
+  if (location.hash === '#potwierdzone') {
+    document.body.classList.add('signup-done');
+    show('Zapis potwierdzony, dziękuję! Rozdział 3 jest już w drodze na Twoją skrzynkę.', 'ok');
+    var box = document.getElementById('zapisy'); if (box) box.scrollIntoView();
+  }
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     var email = form.email.value.trim();
